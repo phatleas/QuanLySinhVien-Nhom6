@@ -22,7 +22,7 @@ namespace QuanLySV1
         {
             try
             {
-                string query = @"SELECT d.MaDiem, d.MaSV, sv.HoTen as TenSV, d.MaMH, mh.TenMH, 
+                string query = @"SELECT d.MaDiem, d.MaSV, CONCAT(sv.HoDem, ' ', sv.Ten) as TenSV, d.MaMH, mh.TenMH, 
                                d.DiemSo, d.GhiChu 
                                FROM Diem d 
                                LEFT JOIN SinhVien sv ON d.MaSV = sv.MaSV 
@@ -52,7 +52,7 @@ namespace QuanLySV1
             try
             {
                 // Load danh sách sinh viên
-                string querySV = "SELECT MaSV, HoTen FROM SinhVien";
+                string querySV = "SELECT MaSV, CONCAT(HoDem, ' ', Ten) as HoTen FROM SinhVien ORDER BY HoDem, Ten";
                 DataTable dtSV = provider.ExecuteQuery(querySV);
 
                 // Load danh sách môn học
@@ -227,7 +227,7 @@ namespace QuanLySV1
 
             try
             {
-                string query = @"SELECT d.MaDiem, d.MaSV, sv.HoTen as TenSV, d.MaMH, mh.TenMH, 
+                string query = @"SELECT d.MaDiem, d.MaSV, CONCAT(sv.HoDem, ' ', sv.Ten) as TenSV, d.MaMH, mh.TenMH, 
                                d.DiemSo, d.GhiChu 
                                FROM Diem d 
                                LEFT JOIN SinhVien sv ON d.MaSV = sv.MaSV 
@@ -241,20 +241,25 @@ namespace QuanLySV1
                 {
                     case 0: // Mã sinh viên
                         whereClause = "d.MaSV LIKE @searchValue";
+                        searchValue = "%" + searchValue + "%";
                         break;
                     case 1: // Tên sinh viên
-                        whereClause = "sv.HoTen LIKE @searchValue";
+                        whereClause = "CONCAT(sv.HoDem, ' ', sv.Ten) LIKE @searchValue";
+                        searchValue = "%" + searchValue + "%";
                         break;
                     case 2: // Mã môn học
                         whereClause = "d.MaMH LIKE @searchValue";
+                        searchValue = "%" + searchValue + "%";
                         break;
                     case 3: // Tên môn học
                         whereClause = "mh.TenMH LIKE @searchValue";
+                        searchValue = "%" + searchValue + "%";
                         break;
                     case 4: // Điểm số
                         if (float.TryParse(searchValue, out float diem))
                         {
                             whereClause = "d.DiemSo = @searchValue";
+                            // Không thêm % cho tìm kiếm điểm số chính xác
                         }
                         else
                         {
@@ -264,11 +269,11 @@ namespace QuanLySV1
                         break;
                     default:
                         whereClause = "d.MaSV LIKE @searchValue";
+                        searchValue = "%" + searchValue + "%";
                         break;
                 }
 
                 query += whereClause;
-                searchValue = "%" + searchValue + "%"; // Thêm % cho LIKE
 
                 DataTable result = provider.ExecuteQuery(query, new object[] { searchValue });
                 dgvDiem.DataSource = result;

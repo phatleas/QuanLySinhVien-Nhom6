@@ -24,103 +24,112 @@
 
         private void InitializeComponent()
         {
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.lblMatKhau = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnDangKy = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.linkDangNhap = new System.Windows.Forms.LinkLabel();
-            this.SuspendLayout();
+            lblTaiKhoan = new Label();
+            lblMatKhau = new Label();
+            lblEmail = new Label();
+            txtTaiKhoan = new TextBox();
+            txtMatKhau = new TextBox();
+            txtEmail = new TextBox();
+            btnDangKy = new Button();
+            btnThoat = new Button();
+            linkDangNhap = new LinkLabel();
+            SuspendLayout();
             // 
             // lblTaiKhoan
             // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(40, 30);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(70, 16);
-            this.lblTaiKhoan.Text = "Tài khoản:";
+            lblTaiKhoan.AutoSize = true;
+            lblTaiKhoan.Location = new Point(40, 30);
+            lblTaiKhoan.Name = "lblTaiKhoan";
+            lblTaiKhoan.Size = new Size(61, 15);
+            lblTaiKhoan.TabIndex = 0;
+            lblTaiKhoan.Text = "Tài khoản:";
             // 
             // lblMatKhau
             // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(40, 70);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(65, 16);
-            this.lblMatKhau.Text = "Mật khẩu:";
+            lblMatKhau.AutoSize = true;
+            lblMatKhau.Location = new Point(40, 70);
+            lblMatKhau.Name = "lblMatKhau";
+            lblMatKhau.Size = new Size(60, 15);
+            lblMatKhau.TabIndex = 1;
+            lblMatKhau.Text = "Mật khẩu:";
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(40, 110);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 16);
-            this.lblEmail.Text = "Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(40, 110);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(39, 15);
+            lblEmail.TabIndex = 2;
+            lblEmail.Text = "Email:";
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(130, 27);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(180, 22);
+            txtTaiKhoan.Location = new Point(130, 27);
+            txtTaiKhoan.Name = "txtTaiKhoan";
+            txtTaiKhoan.Size = new Size(180, 23);
+            txtTaiKhoan.TabIndex = 3;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(130, 67);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(180, 22);
-            this.txtMatKhau.PasswordChar = '*';
+            txtMatKhau.Location = new Point(130, 67);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '*';
+            txtMatKhau.Size = new Size(180, 23);
+            txtMatKhau.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(130, 107);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(180, 22);
+            txtEmail.Location = new Point(130, 107);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(180, 23);
+            txtEmail.TabIndex = 5;
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(130, 150);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(90, 30);
-            this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            btnDangKy.Location = new Point(130, 150);
+            btnDangKy.Name = "btnDangKy";
+            btnDangKy.Size = new Size(90, 30);
+            btnDangKy.TabIndex = 6;
+            btnDangKy.Text = "Đăng ký";
+            btnDangKy.Click += btnDangKy_Click;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(230, 150);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(80, 30);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            btnThoat.Location = new Point(230, 150);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(80, 30);
+            btnThoat.TabIndex = 7;
+            btnThoat.Text = "Thoát";
+            btnThoat.Click += btnThoat_Click;
             // 
             // linkDangNhap
             // 
-            this.linkDangNhap.AutoSize = true;
-            this.linkDangNhap.Location = new System.Drawing.Point(130, 190);
-            this.linkDangNhap.Name = "linkDangNhap";
-            this.linkDangNhap.Size = new System.Drawing.Size(120, 16);
-            this.linkDangNhap.TabStop = true;
-            this.linkDangNhap.Text = "Đã có tài khoản?";
-            this.linkDangNhap.Click += new System.EventHandler(this.linkDangNhap_LinkClicked);
+            linkDangNhap.AutoSize = true;
+            linkDangNhap.Location = new Point(130, 190);
+            linkDangNhap.Name = "linkDangNhap";
+            linkDangNhap.Size = new Size(94, 15);
+            linkDangNhap.TabIndex = 8;
+            linkDangNhap.TabStop = true;
+            linkDangNhap.Text = "Đã có tài khoản?";
+            linkDangNhap.Click += linkDangNhap_LinkClicked;
             // 
             // FormDangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(380, 230);
-            this.Controls.Add(this.lblTaiKhoan);
-            this.Controls.Add(this.lblMatKhau);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.btnDangKy);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.linkDangNhap);
-            this.Name = "FormDangKy";
-            this.Text = "Đăng ký";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(442, 252);
+            Controls.Add(lblTaiKhoan);
+            Controls.Add(lblMatKhau);
+            Controls.Add(lblEmail);
+            Controls.Add(txtTaiKhoan);
+            Controls.Add(txtMatKhau);
+            Controls.Add(txtEmail);
+            Controls.Add(btnDangKy);
+            Controls.Add(btnThoat);
+            Controls.Add(linkDangNhap);
+            Name = "FormDangKy";
+            Text = "Đăng ký";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

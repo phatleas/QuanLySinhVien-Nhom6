@@ -35,210 +35,220 @@
 
         private void InitializeComponent()
         {
-            this.dgvDiem = new System.Windows.Forms.DataGridView();
-            this.txtMaSV = new System.Windows.Forms.TextBox();
-            this.txtMaMH = new System.Windows.Forms.TextBox();
-            this.txtDiemSo = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHienThi = new System.Windows.Forms.Button();
-            this.lblMaSV = new System.Windows.Forms.Label();
-            this.lblMaMH = new System.Windows.Forms.Label();
-            this.lblDiemSo = new System.Windows.Forms.Label();
-            this.lblGhiChu = new System.Windows.Forms.Label();
-            // Khởi tạo các control tìm kiếm
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.cboTimKiem = new System.Windows.Forms.ComboBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.lblTimKiem = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // lblMaSV
-            // 
-            this.lblMaSV.AutoSize = true;
-            this.lblMaSV.Location = new System.Drawing.Point(20, 23);
-            this.lblMaSV.Name = "lblMaSV";
-            this.lblMaSV.Size = new System.Drawing.Size(60, 16);
-            this.lblMaSV.Text = "Mã SV:";
-            // 
-            // txtMaSV
-            // 
-            this.txtMaSV.Location = new System.Drawing.Point(80, 20);
-            this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(80, 22);
-            // 
-            // lblMaMH
-            // 
-            this.lblMaMH.AutoSize = true;
-            this.lblMaMH.Location = new System.Drawing.Point(180, 23);
-            this.lblMaMH.Name = "lblMaMH";
-            this.lblMaMH.Size = new System.Drawing.Size(60, 16);
-            this.lblMaMH.Text = "Mã MH:";
-            // 
-            // txtMaMH
-            // 
-            this.txtMaMH.Location = new System.Drawing.Point(240, 20);
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(80, 22);
-            // 
-            // lblDiemSo
-            // 
-            this.lblDiemSo.AutoSize = true;
-            this.lblDiemSo.Location = new System.Drawing.Point(340, 23);
-            this.lblDiemSo.Name = "lblDiemSo";
-            this.lblDiemSo.Size = new System.Drawing.Size(65, 16);
-            this.lblDiemSo.Text = "Điểm số:";
-            // 
-            // txtDiemSo
-            // 
-            this.txtDiemSo.Location = new System.Drawing.Point(410, 20);
-            this.txtDiemSo.Name = "txtDiemSo";
-            this.txtDiemSo.Size = new System.Drawing.Size(60, 22);
-            // 
-            // lblGhiChu
-            // 
-            this.lblGhiChu.AutoSize = true;
-            this.lblGhiChu.Location = new System.Drawing.Point(490, 23);
-            this.lblGhiChu.Name = "lblGhiChu";
-            this.lblGhiChu.Size = new System.Drawing.Size(60, 16);
-            this.lblGhiChu.Text = "Ghi chú:";
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(560, 20);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(120, 22);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(20, 60);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(70, 30);
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(100, 60);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(70, 30);
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(180, 60);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(70, 30);
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(260, 60);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(70, 30);
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnHienThi
-            // 
-            this.btnHienThi.Location = new System.Drawing.Point(340, 60);
-            this.btnHienThi.Name = "btnHienThi";
-            this.btnHienThi.Size = new System.Drawing.Size(80, 30);
-            this.btnHienThi.Text = "Hiển thị";
-            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
-            // 
-            // lblTimKiem
-            // 
-            this.lblTimKiem.AutoSize = true;
-            this.lblTimKiem.Location = new System.Drawing.Point(20, 110);
-            this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(70, 16);
-            this.lblTimKiem.Text = "Tìm kiếm:";
-            // 
-            // cboTimKiem
-            // 
-            this.cboTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTimKiem.FormattingEnabled = true;
-            this.cboTimKiem.Items.AddRange(new object[] {
-            "Mã sinh viên",
-            "Tên sinh viên",
-            "Mã môn học",
-            "Tên môn học",
-            "Điểm số"});
-            this.cboTimKiem.Location = new System.Drawing.Point(100, 107);
-            this.cboTimKiem.Name = "cboTimKiem";
-            this.cboTimKiem.Size = new System.Drawing.Size(120, 24);
-            this.cboTimKiem.TabIndex = 0;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(240, 107);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(200, 22);
-            this.txtTimKiem.TabIndex = 1;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(460, 105);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(80, 30);
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(560, 105);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(80, 30);
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            dgvDiem = new DataGridView();
+            txtMaSV = new TextBox();
+            txtMaMH = new TextBox();
+            txtDiemSo = new TextBox();
+            txtGhiChu = new TextBox();
+            btnThem = new Button();
+            btnSua = new Button();
+            btnXoa = new Button();
+            btnLuu = new Button();
+            btnHienThi = new Button();
+            lblMaSV = new Label();
+            lblMaMH = new Label();
+            lblDiemSo = new Label();
+            lblGhiChu = new Label();
+            txtTimKiem = new TextBox();
+            cboTimKiem = new ComboBox();
+            btnTimKiem = new Button();
+            btnLamMoi = new Button();
+            lblTimKiem = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvDiem).BeginInit();
+            SuspendLayout();
             // 
             // dgvDiem
             // 
-            this.dgvDiem.Location = new System.Drawing.Point(20, 150);
-            this.dgvDiem.Name = "dgvDiem";
-            this.dgvDiem.Size = new System.Drawing.Size(660, 250);
-            this.dgvDiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDiem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDiem.ReadOnly = true;
+            dgvDiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDiem.Location = new Point(20, 150);
+            dgvDiem.Name = "dgvDiem";
+            dgvDiem.ReadOnly = true;
+            dgvDiem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDiem.Size = new Size(660, 250);
+            dgvDiem.TabIndex = 16;
+            // 
+            // txtMaSV
+            // 
+            txtMaSV.Location = new Point(80, 20);
+            txtMaSV.Name = "txtMaSV";
+            txtMaSV.Size = new Size(80, 29);
+            txtMaSV.TabIndex = 1;
+            // 
+            // txtMaMH
+            // 
+            txtMaMH.Location = new Point(240, 20);
+            txtMaMH.Name = "txtMaMH";
+            txtMaMH.Size = new Size(80, 29);
+            txtMaMH.TabIndex = 3;
+            // 
+            // txtDiemSo
+            // 
+            txtDiemSo.Location = new Point(410, 20);
+            txtDiemSo.Name = "txtDiemSo";
+            txtDiemSo.Size = new Size(60, 29);
+            txtDiemSo.TabIndex = 5;
+            // 
+            // txtGhiChu
+            // 
+            txtGhiChu.Location = new Point(560, 20);
+            txtGhiChu.Name = "txtGhiChu";
+            txtGhiChu.Size = new Size(120, 29);
+            txtGhiChu.TabIndex = 7;
+            // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(20, 60);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(70, 30);
+            btnThem.TabIndex = 8;
+            btnThem.Text = "Thêm";
+            btnThem.Click += btnThem_Click;
+            // 
+            // btnSua
+            // 
+            btnSua.Location = new Point(100, 60);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(70, 30);
+            btnSua.TabIndex = 9;
+            btnSua.Text = "Sửa";
+            btnSua.Click += btnSua_Click;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Location = new Point(180, 60);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(70, 30);
+            btnXoa.TabIndex = 10;
+            btnXoa.Text = "Xóa";
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnLuu
+            // 
+            btnLuu.Location = new Point(260, 60);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(70, 30);
+            btnLuu.TabIndex = 11;
+            btnLuu.Text = "Lưu";
+            btnLuu.Click += btnLuu_Click;
+            // 
+            // btnHienThi
+            // 
+            btnHienThi.Location = new Point(340, 60);
+            btnHienThi.Name = "btnHienThi";
+            btnHienThi.Size = new Size(80, 30);
+            btnHienThi.TabIndex = 12;
+            btnHienThi.Text = "Hiển thị";
+            btnHienThi.Click += btnHienThi_Click;
+            // 
+            // lblMaSV
+            // 
+            lblMaSV.AutoSize = true;
+            lblMaSV.Location = new Point(20, 23);
+            lblMaSV.Name = "lblMaSV";
+            lblMaSV.Size = new Size(58, 21);
+            lblMaSV.TabIndex = 0;
+            lblMaSV.Text = "Mã SV:";
+            // 
+            // lblMaMH
+            // 
+            lblMaMH.AutoSize = true;
+            lblMaMH.Location = new Point(180, 23);
+            lblMaMH.Name = "lblMaMH";
+            lblMaMH.Size = new Size(64, 21);
+            lblMaMH.TabIndex = 2;
+            lblMaMH.Text = "Mã MH:";
+            // 
+            // lblDiemSo
+            // 
+            lblDiemSo.AutoSize = true;
+            lblDiemSo.Location = new Point(340, 23);
+            lblDiemSo.Name = "lblDiemSo";
+            lblDiemSo.Size = new Size(70, 21);
+            lblDiemSo.TabIndex = 4;
+            lblDiemSo.Text = "Điểm số:";
+            // 
+            // lblGhiChu
+            // 
+            lblGhiChu.AutoSize = true;
+            lblGhiChu.Location = new Point(490, 23);
+            lblGhiChu.Name = "lblGhiChu";
+            lblGhiChu.Size = new Size(66, 21);
+            lblGhiChu.TabIndex = 6;
+            lblGhiChu.Text = "Ghi chú:";
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Location = new Point(240, 107);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(200, 29);
+            txtTimKiem.TabIndex = 1;
+            // 
+            // cboTimKiem
+            // 
+            cboTimKiem.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTimKiem.FormattingEnabled = true;
+            cboTimKiem.Items.AddRange(new object[] { "Mã sinh viên", "Tên sinh viên", "Mã môn học", "Tên môn học", "Điểm số" });
+            cboTimKiem.Location = new Point(100, 107);
+            cboTimKiem.Name = "cboTimKiem";
+            cboTimKiem.Size = new Size(120, 29);
+            cboTimKiem.TabIndex = 0;
+            // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Location = new Point(460, 105);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(80, 30);
+            btnTimKiem.TabIndex = 14;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.Click += btnTimKiem_Click;
+            // 
+            // btnLamMoi
+            // 
+            btnLamMoi.Location = new Point(560, 105);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new Size(80, 30);
+            btnLamMoi.TabIndex = 15;
+            btnLamMoi.Text = "Làm mới";
+            btnLamMoi.Click += btnLamMoi_Click;
+            // 
+            // lblTimKiem
+            // 
+            lblTimKiem.AutoSize = true;
+            lblTimKiem.Location = new Point(20, 110);
+            lblTimKiem.Name = "lblTimKiem";
+            lblTimKiem.Size = new Size(77, 21);
+            lblTimKiem.TabIndex = 13;
+            lblTimKiem.Text = "Tìm kiếm:";
             // 
             // FormDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(700, 420);
-            this.Controls.Add(this.lblMaSV);
-            this.Controls.Add(this.txtMaSV);
-            this.Controls.Add(this.lblMaMH);
-            this.Controls.Add(this.txtMaMH);
-            this.Controls.Add(this.lblDiemSo);
-            this.Controls.Add(this.txtDiemSo);
-            this.Controls.Add(this.lblGhiChu);
-            this.Controls.Add(this.txtGhiChu);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnHienThi);
-            this.Controls.Add(this.lblTimKiem);
-            this.Controls.Add(this.cboTimKiem);
-            this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.btnLamMoi);
-            this.Controls.Add(this.dgvDiem);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "FormDiem";
-            this.Text = "Quản lý điểm";
-            this.Load += new System.EventHandler(this.FormDiem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(998, 579);
+            Controls.Add(lblMaSV);
+            Controls.Add(txtMaSV);
+            Controls.Add(lblMaMH);
+            Controls.Add(txtMaMH);
+            Controls.Add(lblDiemSo);
+            Controls.Add(txtDiemSo);
+            Controls.Add(lblGhiChu);
+            Controls.Add(txtGhiChu);
+            Controls.Add(btnThem);
+            Controls.Add(btnSua);
+            Controls.Add(btnXoa);
+            Controls.Add(btnLuu);
+            Controls.Add(btnHienThi);
+            Controls.Add(lblTimKiem);
+            Controls.Add(cboTimKiem);
+            Controls.Add(txtTimKiem);
+            Controls.Add(btnTimKiem);
+            Controls.Add(btnLamMoi);
+            Controls.Add(dgvDiem);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Name = "FormDiem";
+            Text = "Quản lý điểm";
+            Load += FormDiem_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvDiem).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

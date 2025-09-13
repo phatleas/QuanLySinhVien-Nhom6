@@ -22,85 +22,110 @@
 
         private void InitializeComponent()
         {
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.lblMatKhau = new System.Windows.Forms.Label();
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.linkDangKy = new System.Windows.Forms.LinkLabel();
-            this.SuspendLayout();
+            lblTaiKhoan = new Label();
+            lblMatKhau = new Label();
+            txtTaiKhoan = new TextBox();
+            txtMatKhau = new TextBox();
+            btnDangNhap = new Button();
+            btnThoat = new Button();
+            linkDangKy = new LinkLabel();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // lblTaiKhoan
             // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(40, 40);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(70, 16);
-            this.lblTaiKhoan.Text = "Tài khoản:";
+            lblTaiKhoan.AutoSize = true;
+            lblTaiKhoan.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTaiKhoan.Location = new Point(400, 247);
+            lblTaiKhoan.Name = "lblTaiKhoan";
+            lblTaiKhoan.Size = new Size(120, 32);
+            lblTaiKhoan.TabIndex = 0;
+            lblTaiKhoan.Text = "Tài khoản:";
             // 
             // lblMatKhau
             // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(40, 80);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(65, 16);
-            this.lblMatKhau.Text = "Mật khẩu:";
+            lblMatKhau.AutoSize = true;
+            lblMatKhau.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMatKhau.Location = new Point(401, 346);
+            lblMatKhau.Name = "lblMatKhau";
+            lblMatKhau.Size = new Size(106, 30);
+            lblMatKhau.TabIndex = 1;
+            lblMatKhau.Text = "Mật khẩu:";
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(130, 37);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(180, 22);
+            txtTaiKhoan.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTaiKhoan.Location = new Point(539, 239);
+            txtTaiKhoan.Name = "txtTaiKhoan";
+            txtTaiKhoan.Size = new Size(220, 35);
+            txtTaiKhoan.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(130, 77);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(180, 22);
-            this.txtMatKhau.PasswordChar = '*';
+            txtMatKhau.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMatKhau.Location = new Point(539, 338);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '*';
+            txtMatKhau.Size = new Size(220, 35);
+            txtMatKhau.TabIndex = 3;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(130, 120);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(90, 30);
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            btnDangNhap.Location = new Point(350, 444);
+            btnDangNhap.Name = "btnDangNhap";
+            btnDangNhap.Size = new Size(212, 65);
+            btnDangNhap.TabIndex = 4;
+            btnDangNhap.Text = "Đăng nhập";
+            btnDangNhap.Click += btnDangNhap_Click;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(230, 120);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(80, 30);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            btnThoat.Location = new Point(658, 444);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(153, 65);
+            btnThoat.TabIndex = 5;
+            btnThoat.Text = "Thoát";
+            btnThoat.Click += btnThoat_Click;
             // 
             // linkDangKy
             // 
-            this.linkDangKy.AutoSize = true;
-            this.linkDangKy.Location = new System.Drawing.Point(130, 160);
-            this.linkDangKy.Name = "linkDangKy";
-            this.linkDangKy.Size = new System.Drawing.Size(70, 16);
-            this.linkDangKy.TabStop = true;
-            this.linkDangKy.Text = "Đăng ký?";
-            this.linkDangKy.Click += new System.EventHandler(this.linkDangKy_LinkClicked);
+            linkDangKy.AutoSize = true;
+            linkDangKy.Location = new Point(429, 569);
+            linkDangKy.Name = "linkDangKy";
+            linkDangKy.Size = new Size(89, 25);
+            linkDangKy.TabIndex = 6;
+            linkDangKy.TabStop = true;
+            linkDangKy.Text = "Đăng ký?";
+            linkDangKy.Click += linkDangKy_LinkClicked;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(411, 80);
+            label1.Name = "label1";
+            label1.Size = new Size(336, 50);
+            label1.TabIndex = 7;
+            label1.Text = "Quản Lý Sinh Viên";
+            label1.Click += label1_Click;
             // 
             // FormDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(380, 210);
-            this.Controls.Add(this.lblTaiKhoan);
-            this.Controls.Add(this.lblMatKhau);
-            this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.linkDangKy);
-            this.Name = "FormDangNhap";
-            this.Text = "Đăng nhập";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(1205, 759);
+            Controls.Add(label1);
+            Controls.Add(lblTaiKhoan);
+            Controls.Add(lblMatKhau);
+            Controls.Add(txtTaiKhoan);
+            Controls.Add(txtMatKhau);
+            Controls.Add(btnDangNhap);
+            Controls.Add(btnThoat);
+            Controls.Add(linkDangKy);
+            Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Name = "FormDangNhap";
+            Text = "Đăng nhập";
+            ResumeLayout(false);
+            PerformLayout();
         }
+        private Label label1;
     }
 }

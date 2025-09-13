@@ -75,6 +75,8 @@
             lblGhiChu = new Label();
             lblTimKiem = new Label();
             lblKhoa = new Label();
+            lblDanToc = new Label();
+            cboDanToc = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvSinhVien).BeginInit();
             SuspendLayout();
             // 
@@ -139,14 +141,14 @@
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Location = new Point(480, 17);
+            txtTimKiem.Location = new Point(668, 18);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(180, 25);
             txtTimKiem.TabIndex = 16;
             // 
             // cboKhoa
             // 
-            cboKhoa.Location = new Point(480, 57);
+            cboKhoa.Location = new Point(668, 77);
             cboKhoa.Name = "cboKhoa";
             cboKhoa.Size = new Size(180, 25);
             cboKhoa.TabIndex = 17;
@@ -198,7 +200,7 @@
             // 
             // btnTimKiem1
             // 
-            btnTimKiem1.Location = new Point(670, 15);
+            btnTimKiem1.Location = new Point(893, 17);
             btnTimKiem1.Name = "btnTimKiem1";
             btnTimKiem1.Size = new Size(100, 26);
             btnTimKiem1.TabIndex = 23;
@@ -207,7 +209,7 @@
             // 
             // btnTimKiem2
             // 
-            btnTimKiem2.Location = new Point(670, 55);
+            btnTimKiem2.Location = new Point(893, 75);
             btnTimKiem2.Name = "btnTimKiem2";
             btnTimKiem2.Size = new Size(100, 26);
             btnTimKiem2.TabIndex = 24;
@@ -316,7 +318,7 @@
             // lblTimKiem
             // 
             lblTimKiem.AutoSize = true;
-            lblTimKiem.Location = new Point(400, 20);
+            lblTimKiem.Location = new Point(580, 25);
             lblTimKiem.Name = "lblTimKiem";
             lblTimKiem.Size = new Size(63, 17);
             lblTimKiem.TabIndex = 7;
@@ -325,15 +327,34 @@
             // lblKhoa
             // 
             lblKhoa.AutoSize = true;
-            lblKhoa.Location = new Point(400, 60);
+            lblKhoa.Location = new Point(590, 85);
             lblKhoa.Name = "lblKhoa";
             lblKhoa.Size = new Size(41, 17);
             lblKhoa.TabIndex = 8;
             lblKhoa.Text = "Khoa:";
             // 
+            // lblDanToc
+            // 
+            lblDanToc.AutoSize = true;
+            lblDanToc.Location = new Point(344, 33);
+            lblDanToc.Name = "lblDanToc";
+            lblDanToc.Size = new Size(60, 17);
+            lblDanToc.TabIndex = 30;
+            lblDanToc.Text = "Dân tộc :";
+            // 
+            // cboDanToc
+            // 
+            cboDanToc.FormattingEnabled = true;
+            cboDanToc.Location = new Point(410, 30);
+            cboDanToc.Name = "cboDanToc";
+            cboDanToc.Size = new Size(121, 25);
+            cboDanToc.TabIndex = 31;
+            // 
             // FormSinhVien
             // 
             ClientSize = new Size(1291, 751);
+            Controls.Add(cboDanToc);
+            Controls.Add(lblDanToc);
             Controls.Add(lblMaSV);
             Controls.Add(lblHoDem);
             Controls.Add(lblTen);
@@ -372,5 +393,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
+        private Label lblDanToc;
+        private ComboBox cboDanToc;
     }
 }

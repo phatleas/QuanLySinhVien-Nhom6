@@ -120,13 +120,11 @@ namespace QuanLySV1
             MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo");
         }
 
-        // Hiển thị lại danh sách môn học
         private void btnHienThi_Click(object sender, EventArgs e)
         {
             LoadData();
         }
 
-        // Khi chọn dòng trên DataGridView, hiển thị lên các TextBox
         private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvMonHoc.Rows[e.RowIndex].Cells["MaMH"].Value != null)

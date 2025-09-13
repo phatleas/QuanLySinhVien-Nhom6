@@ -73,3 +73,4 @@ C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.genruntimeconfig.cache
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\ref\QuanLySV1.dll
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.FormDangKy.resources
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.FormDangNhap.resources
+C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.sourcelink.json
