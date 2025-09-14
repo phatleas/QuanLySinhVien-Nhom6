@@ -29,133 +29,167 @@
 
         private void InitializeComponent()
         {
-            this.dgvMonHoc = new System.Windows.Forms.DataGridView();
-            this.txtMaMH = new System.Windows.Forms.TextBox();
-            this.txtTenMH = new System.Windows.Forms.TextBox();
-            this.txtSoTinChi = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHienThi = new System.Windows.Forms.Button();
-            this.lblMaMH = new System.Windows.Forms.Label();
-            this.lblTenMH = new System.Windows.Forms.Label();
-            this.lblSoTinChi = new System.Windows.Forms.Label();
-            this.lblGhiChu = new System.Windows.Forms.Label();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
-            this.SuspendLayout();
-
-            // lblMaMH
-            this.lblMaMH.AutoSize = true;
-            this.lblMaMH.Location = new System.Drawing.Point(20, 23);
-            this.lblMaMH.Name = "lblMaMH";
-            this.lblMaMH.Size = new System.Drawing.Size(60, 16);
-            this.lblMaMH.Text = "Mã MH:";
-
-            // txtMaMH
-            this.txtMaMH.Location = new System.Drawing.Point(90, 20);
-            this.txtMaMH.Name = "txtMaMH";
-            this.txtMaMH.Size = new System.Drawing.Size(80, 22);
-
-            // lblTenMH
-            this.lblTenMH.AutoSize = true;
-            this.lblTenMH.Location = new System.Drawing.Point(180, 23);
-            this.lblTenMH.Name = "lblTenMH";
-            this.lblTenMH.Size = new System.Drawing.Size(62, 16);
-            this.lblTenMH.Text = "Tên MH:";
-
-            // txtTenMH
-            this.txtTenMH.Location = new System.Drawing.Point(250, 20);
-            this.txtTenMH.Name = "txtTenMH";
-            this.txtTenMH.Size = new System.Drawing.Size(120, 22);
-
-            // lblSoTinChi
-            this.lblSoTinChi.AutoSize = true;
-            this.lblSoTinChi.Location = new System.Drawing.Point(380, 23);
-            this.lblSoTinChi.Name = "lblSoTinChi";
-            this.lblSoTinChi.Size = new System.Drawing.Size(70, 16);
-            this.lblSoTinChi.Text = "Số tín chỉ:";
-
-            // txtSoTinChi
-            this.txtSoTinChi.Location = new System.Drawing.Point(460, 20);
-            this.txtSoTinChi.Name = "txtSoTinChi";
-            this.txtSoTinChi.Size = new System.Drawing.Size(50, 22);
-
-            // lblGhiChu
-            this.lblGhiChu.AutoSize = true;
-            this.lblGhiChu.Location = new System.Drawing.Point(520, 23);
-            this.lblGhiChu.Name = "lblGhiChu";
-            this.lblGhiChu.Size = new System.Drawing.Size(60, 16);
-            this.lblGhiChu.Text = "Ghi chú:";
-
-            // txtGhiChu
-            this.txtGhiChu.Location = new System.Drawing.Point(590, 20);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(120, 22);
-
-            // btnThem
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Location = new System.Drawing.Point(20, 60);
-            this.btnThem.Size = new System.Drawing.Size(70, 30);
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-
-            // btnSua
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Location = new System.Drawing.Point(100, 60);
-            this.btnSua.Size = new System.Drawing.Size(70, 30);
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-
-            // btnXoa
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Location = new System.Drawing.Point(180, 60);
-            this.btnXoa.Size = new System.Drawing.Size(70, 30);
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-
-            // btnLuu
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Location = new System.Drawing.Point(260, 60);
-            this.btnLuu.Size = new System.Drawing.Size(70, 30);
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-
-            // btnHienThi
-            this.btnHienThi.Text = "Hiển thị";
-            this.btnHienThi.Location = new System.Drawing.Point(340, 60);
-            this.btnHienThi.Size = new System.Drawing.Size(80, 30);
-            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
-
+            dgvMonHoc = new DataGridView();
+            txtMaMH = new TextBox();
+            txtTenMH = new TextBox();
+            txtSoTinChi = new TextBox();
+            txtGhiChu = new TextBox();
+            btnThem = new Button();
+            btnSua = new Button();
+            btnXoa = new Button();
+            btnLuu = new Button();
+            btnHienThi = new Button();
+            lblMaMH = new Label();
+            lblTenMH = new Label();
+            lblSoTinChi = new Label();
+            lblGhiChu = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvMonHoc).BeginInit();
+            SuspendLayout();
+            // 
             // dgvMonHoc
-            this.dgvMonHoc.Location = new System.Drawing.Point(20, 110);
-            this.dgvMonHoc.Size = new System.Drawing.Size(690, 250);
-            this.dgvMonHoc.Name = "dgvMonHoc";
-            this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMonHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMonHoc.ReadOnly = true;
-
+            // 
+            dgvMonHoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMonHoc.ColumnHeadersHeight = 27;
+            dgvMonHoc.Location = new Point(69, 257);
+            dgvMonHoc.Name = "dgvMonHoc";
+            dgvMonHoc.ReadOnly = true;
+            dgvMonHoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMonHoc.Size = new Size(821, 347);
+            dgvMonHoc.TabIndex = 13;
+            // 
+            // txtMaMH
+            // 
+            txtMaMH.Location = new Point(275, 96);
+            txtMaMH.Name = "txtMaMH";
+            txtMaMH.Size = new Size(109, 29);
+            txtMaMH.TabIndex = 1;
+            // 
+            // txtTenMH
+            // 
+            txtTenMH.Location = new Point(573, 96);
+            txtTenMH.Name = "txtTenMH";
+            txtTenMH.Size = new Size(120, 29);
+            txtTenMH.TabIndex = 3;
+            // 
+            // txtSoTinChi
+            // 
+            txtSoTinChi.Location = new Point(275, 158);
+            txtSoTinChi.Name = "txtSoTinChi";
+            txtSoTinChi.Size = new Size(120, 29);
+            txtSoTinChi.TabIndex = 5;
+            // 
+            // txtGhiChu
+            // 
+            txtGhiChu.Location = new Point(573, 161);
+            txtGhiChu.Name = "txtGhiChu";
+            txtGhiChu.Size = new Size(120, 29);
+            txtGhiChu.TabIndex = 7;
+            // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(69, 636);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(70, 30);
+            btnThem.TabIndex = 8;
+            btnThem.Text = "Thêm";
+            btnThem.Click += btnThem_Click;
+            // 
+            // btnSua
+            // 
+            btnSua.Location = new Point(160, 636);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(70, 30);
+            btnSua.TabIndex = 9;
+            btnSua.Text = "Sửa";
+            btnSua.Click += btnSua_Click;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Location = new Point(254, 636);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(70, 30);
+            btnXoa.TabIndex = 10;
+            btnXoa.Text = "Xóa";
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnLuu
+            // 
+            btnLuu.Location = new Point(363, 636);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(70, 30);
+            btnLuu.TabIndex = 11;
+            btnLuu.Text = "Lưu";
+            btnLuu.Click += btnLuu_Click;
+            // 
+            // btnHienThi
+            // 
+            btnHienThi.Location = new Point(461, 636);
+            btnHienThi.Name = "btnHienThi";
+            btnHienThi.Size = new Size(80, 30);
+            btnHienThi.TabIndex = 12;
+            btnHienThi.Text = "Hiển thị";
+            btnHienThi.Click += btnHienThi_Click;
+            // 
+            // lblMaMH
+            // 
+            lblMaMH.AutoSize = true;
+            lblMaMH.Location = new Point(171, 96);
+            lblMaMH.Name = "lblMaMH";
+            lblMaMH.Size = new Size(80, 22);
+            lblMaMH.TabIndex = 0;
+            lblMaMH.Text = "Mã MH:";
+            // 
+            // lblTenMH
+            // 
+            lblTenMH.AutoSize = true;
+            lblTenMH.Location = new Point(461, 103);
+            lblTenMH.Name = "lblTenMH";
+            lblTenMH.Size = new Size(84, 22);
+            lblTenMH.TabIndex = 2;
+            lblTenMH.Text = "Tên MH:";
+            // 
+            // lblSoTinChi
+            // 
+            lblSoTinChi.AutoSize = true;
+            lblSoTinChi.Location = new Point(160, 161);
+            lblSoTinChi.Name = "lblSoTinChi";
+            lblSoTinChi.Size = new Size(91, 22);
+            lblSoTinChi.TabIndex = 4;
+            lblSoTinChi.Text = "Số tín chỉ:";
+            // 
+            // lblGhiChu
+            // 
+            lblGhiChu.AutoSize = true;
+            lblGhiChu.Location = new Point(466, 164);
+            lblGhiChu.Name = "lblGhiChu";
+            lblGhiChu.Size = new Size(79, 22);
+            lblGhiChu.TabIndex = 6;
+            lblGhiChu.Text = "Ghi chú:";
+            // 
             // FormMonHoc
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(740, 390);
-            this.Controls.Add(this.lblMaMH);
-            this.Controls.Add(this.txtMaMH);
-            this.Controls.Add(this.lblTenMH);
-            this.Controls.Add(this.txtTenMH);
-            this.Controls.Add(this.lblSoTinChi);
-            this.Controls.Add(this.txtSoTinChi);
-            this.Controls.Add(this.lblGhiChu);
-            this.Controls.Add(this.txtGhiChu);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnHienThi);
-            this.Controls.Add(this.dgvMonHoc);
-            this.Name = "FormMonHoc";
-            this.Text = "Quản lý môn học";
-            this.Load += new System.EventHandler(this.FormMonHoc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            ClientSize = new Size(1266, 751);
+            Controls.Add(lblMaMH);
+            Controls.Add(txtMaMH);
+            Controls.Add(lblTenMH);
+            Controls.Add(txtTenMH);
+            Controls.Add(lblSoTinChi);
+            Controls.Add(txtSoTinChi);
+            Controls.Add(lblGhiChu);
+            Controls.Add(txtGhiChu);
+            Controls.Add(btnThem);
+            Controls.Add(btnSua);
+            Controls.Add(btnXoa);
+            Controls.Add(btnLuu);
+            Controls.Add(btnHienThi);
+            Controls.Add(dgvMonHoc);
+            Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Name = "FormMonHoc";
+            Text = "Quản lý môn học";
+            Load += FormMonHoc_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvMonHoc).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

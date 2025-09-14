@@ -74,3 +74,11 @@ C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\ref\QuanLySV1.dll
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.FormDangKy.resources
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.FormDangNhap.resources
 C:\QuanLySV1\QuanLySV1\obj\Debug\net8.0-windows\QuanLySV1.sourcelink.json
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\RBush.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\QuanLySV1\QuanLySV1\bin\Debug\net8.0-windows\System.IO.Packaging.dll

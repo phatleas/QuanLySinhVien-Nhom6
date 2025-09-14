@@ -77,177 +77,178 @@
             lblKhoa = new Label();
             lblDanToc = new Label();
             cboDanToc = new ComboBox();
+            btnExcel = new Button();
+            Luubtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSinhVien).BeginInit();
             SuspendLayout();
             // 
             // dgvSinhVien
             // 
             dgvSinhVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvSinhVien.Location = new Point(20, 366);
+            dgvSinhVien.ColumnHeadersHeight = 27;
+            dgvSinhVien.Location = new Point(33, 414);
             dgvSinhVien.Name = "dgvSinhVien";
             dgvSinhVien.ReadOnly = true;
             dgvSinhVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSinhVien.Size = new Size(1224, 328);
+            dgvSinhVien.Size = new Size(1224, 372);
             dgvSinhVien.TabIndex = 29;
             // 
             // txtMaSV
             // 
-            txtMaSV.Location = new Point(110, 17);
+            txtMaSV.Location = new Point(165, 8);
             txtMaSV.Name = "txtMaSV";
-            txtMaSV.Size = new Size(200, 25);
+            txtMaSV.Size = new Size(200, 29);
             txtMaSV.TabIndex = 9;
             // 
             // txtHoDem
             // 
-            txtHoDem.Location = new Point(110, 47);
+            txtHoDem.Location = new Point(165, 56);
             txtHoDem.Name = "txtHoDem";
-            txtHoDem.Size = new Size(200, 25);
+            txtHoDem.Size = new Size(200, 29);
             txtHoDem.TabIndex = 10;
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(110, 77);
+            txtTen.Location = new Point(165, 105);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(200, 25);
+            txtTen.Size = new Size(200, 29);
             txtTen.TabIndex = 11;
             // 
             // txtNgaySinh
             // 
-            txtNgaySinh.Location = new Point(110, 107);
+            txtNgaySinh.Location = new Point(165, 144);
             txtNgaySinh.Name = "txtNgaySinh";
-            txtNgaySinh.Size = new Size(200, 25);
+            txtNgaySinh.Size = new Size(200, 29);
             txtNgaySinh.TabIndex = 12;
             // 
             // txtGioiTinh
             // 
-            txtGioiTinh.Location = new Point(110, 137);
+            txtGioiTinh.Location = new Point(165, 195);
             txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Size = new Size(200, 25);
+            txtGioiTinh.Size = new Size(200, 29);
             txtGioiTinh.TabIndex = 13;
             // 
             // txtLop
             // 
-            txtLop.Location = new Point(110, 167);
+            txtLop.Location = new Point(165, 247);
             txtLop.Name = "txtLop";
-            txtLop.Size = new Size(200, 25);
+            txtLop.Size = new Size(200, 29);
             txtLop.TabIndex = 14;
             // 
             // txtGhiChu
             // 
-            txtGhiChu.Location = new Point(110, 197);
+            txtGhiChu.Location = new Point(165, 293);
             txtGhiChu.Name = "txtGhiChu";
-            txtGhiChu.Size = new Size(200, 25);
+            txtGhiChu.Size = new Size(200, 29);
             txtGhiChu.TabIndex = 15;
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Location = new Point(668, 18);
+            txtTimKiem.Location = new Point(530, 137);
             txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(180, 25);
+            txtTimKiem.Size = new Size(180, 29);
             txtTimKiem.TabIndex = 16;
             // 
             // cboKhoa
             // 
-            cboKhoa.Location = new Point(668, 77);
+            cboKhoa.Location = new Point(530, 244);
             cboKhoa.Name = "cboKhoa";
-            cboKhoa.Size = new Size(180, 25);
+            cboKhoa.Size = new Size(180, 30);
             cboKhoa.TabIndex = 17;
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(20, 240);
+            btnThem.Location = new Point(41, 805);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(70, 30);
+            btnThem.Size = new Size(70, 48);
             btnThem.TabIndex = 18;
             btnThem.Text = "Thêm";
             btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(100, 240);
+            btnSua.Location = new Point(142, 806);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(70, 30);
+            btnSua.Size = new Size(70, 46);
             btnSua.TabIndex = 19;
             btnSua.Text = "Sửa";
             btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(180, 240);
+            btnXoa.Location = new Point(236, 805);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(70, 30);
+            btnXoa.Size = new Size(70, 45);
             btnXoa.TabIndex = 20;
             btnXoa.Text = "Xóa";
             btnXoa.Click += btnXoa_Click;
             // 
             // btnLuu
             // 
-            btnLuu.Location = new Point(260, 240);
+            btnLuu.Location = new Point(0, 0);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(70, 30);
-            btnLuu.TabIndex = 21;
-            btnLuu.Text = "Lưu";
-            btnLuu.Click += btnLuu_Click;
+            btnLuu.Size = new Size(75, 23);
+            btnLuu.TabIndex = 33;
             // 
             // btnHienThi
             // 
-            btnHienThi.Location = new Point(340, 240);
+            btnHienThi.Location = new Point(79, 345);
             btnHienThi.Name = "btnHienThi";
-            btnHienThi.Size = new Size(80, 30);
+            btnHienThi.Size = new Size(122, 43);
             btnHienThi.TabIndex = 22;
             btnHienThi.Text = "Hiển thị";
             btnHienThi.Click += btnHienThi_Click;
             // 
             // btnTimKiem1
             // 
-            btnTimKiem1.Location = new Point(893, 17);
+            btnTimKiem1.Location = new Point(755, 129);
             btnTimKiem1.Name = "btnTimKiem1";
-            btnTimKiem1.Size = new Size(100, 26);
+            btnTimKiem1.Size = new Size(167, 44);
             btnTimKiem1.TabIndex = 23;
             btnTimKiem1.Text = "Tìm theo tên/mã";
             btnTimKiem1.Click += btnTimKiem1_Click;
             // 
             // btnTimKiem2
             // 
-            btnTimKiem2.Location = new Point(893, 75);
+            btnTimKiem2.Location = new Point(542, 313);
             btnTimKiem2.Name = "btnTimKiem2";
-            btnTimKiem2.Size = new Size(100, 26);
+            btnTimKiem2.Size = new Size(141, 52);
             btnTimKiem2.TabIndex = 24;
             btnTimKiem2.Text = "Tìm theo khoa";
             btnTimKiem2.Click += btnTimKiem2_Click;
             // 
             // btnXemDSSV
             // 
-            btnXemDSSV.Location = new Point(20, 280);
+            btnXemDSSV.Location = new Point(410, 803);
             btnXemDSSV.Name = "btnXemDSSV";
-            btnXemDSSV.Size = new Size(100, 30);
+            btnXemDSSV.Size = new Size(157, 46);
             btnXemDSSV.TabIndex = 25;
             btnXemDSSV.Text = "Xem DS SV";
             btnXemDSSV.Click += btnXemDSSV_Click;
             // 
             // btnXemTheoKhoa
             // 
-            btnXemTheoKhoa.Location = new Point(130, 280);
+            btnXemTheoKhoa.Location = new Point(733, 802);
             btnXemTheoKhoa.Name = "btnXemTheoKhoa";
-            btnXemTheoKhoa.Size = new Size(120, 30);
+            btnXemTheoKhoa.Size = new Size(156, 48);
             btnXemTheoKhoa.TabIndex = 26;
             btnXemTheoKhoa.Text = "Xem theo khoa";
             btnXemTheoKhoa.Click += btnXemTheoKhoa_Click;
             // 
             // btnXemDiem
             // 
-            btnXemDiem.Location = new Point(260, 280);
+            btnXemDiem.Location = new Point(607, 806);
             btnXemDiem.Name = "btnXemDiem";
-            btnXemDiem.Size = new Size(100, 30);
+            btnXemDiem.Size = new Size(100, 48);
             btnXemDiem.TabIndex = 27;
             btnXemDiem.Text = "Xem điểm";
             btnXemDiem.Click += btnXemDiem_Click;
             // 
             // btnXemDiemTheoMon
             // 
-            btnXemDiemTheoMon.Location = new Point(370, 280);
+            btnXemDiemTheoMon.Location = new Point(926, 802);
             btnXemDiemTheoMon.Name = "btnXemDiemTheoMon";
-            btnXemDiemTheoMon.Size = new Size(140, 30);
+            btnXemDiemTheoMon.Size = new Size(186, 48);
             btnXemDiemTheoMon.TabIndex = 28;
             btnXemDiemTheoMon.Text = "Xem điểm theo môn";
             btnXemDiemTheoMon.Click += btnXemDiemTheoMon_Click;
@@ -255,104 +256,125 @@
             // lblMaSV
             // 
             lblMaSV.AutoSize = true;
-            lblMaSV.Location = new Point(20, 20);
+            lblMaSV.Location = new Point(71, 15);
             lblMaSV.Name = "lblMaSV";
-            lblMaSV.Size = new Size(49, 17);
+            lblMaSV.Size = new Size(70, 22);
             lblMaSV.TabIndex = 0;
             lblMaSV.Text = "Mã SV:";
             // 
             // lblHoDem
             // 
             lblHoDem.AutoSize = true;
-            lblHoDem.Location = new Point(20, 50);
+            lblHoDem.Location = new Point(63, 59);
             lblHoDem.Name = "lblHoDem";
-            lblHoDem.Size = new Size(58, 17);
+            lblHoDem.Size = new Size(78, 22);
             lblHoDem.TabIndex = 1;
             lblHoDem.Text = "Họ đệm:";
             // 
             // lblTen
             // 
             lblTen.AutoSize = true;
-            lblTen.Location = new Point(20, 80);
+            lblTen.Location = new Point(94, 105);
             lblTen.Name = "lblTen";
-            lblTen.Size = new Size(31, 17);
+            lblTen.Size = new Size(47, 22);
             lblTen.TabIndex = 2;
             lblTen.Text = "Tên:";
             // 
             // lblNgaySinh
             // 
             lblNgaySinh.AutoSize = true;
-            lblNgaySinh.Location = new Point(20, 110);
+            lblNgaySinh.Location = new Point(41, 147);
             lblNgaySinh.Name = "lblNgaySinh";
-            lblNgaySinh.Size = new Size(69, 17);
+            lblNgaySinh.Size = new Size(96, 22);
             lblNgaySinh.TabIndex = 3;
             lblNgaySinh.Text = "Ngày sinh:";
             // 
             // lblGioiTinh
             // 
             lblGioiTinh.AutoSize = true;
-            lblGioiTinh.Location = new Point(20, 140);
+            lblGioiTinh.Location = new Point(50, 198);
             lblGioiTinh.Name = "lblGioiTinh";
-            lblGioiTinh.Size = new Size(59, 17);
+            lblGioiTinh.Size = new Size(87, 22);
             lblGioiTinh.TabIndex = 4;
             lblGioiTinh.Text = "Giới tính:";
             // 
             // lblLop
             // 
             lblLop.AutoSize = true;
-            lblLop.Location = new Point(20, 170);
+            lblLop.Location = new Point(89, 247);
             lblLop.Name = "lblLop";
-            lblLop.Size = new Size(33, 17);
+            lblLop.Size = new Size(48, 22);
             lblLop.TabIndex = 5;
             lblLop.Text = "Lớp:";
             // 
             // lblGhiChu
             // 
             lblGhiChu.AutoSize = true;
-            lblGhiChu.Location = new Point(20, 200);
+            lblGhiChu.Location = new Point(58, 296);
             lblGhiChu.Name = "lblGhiChu";
-            lblGhiChu.Size = new Size(54, 17);
+            lblGhiChu.Size = new Size(79, 22);
             lblGhiChu.TabIndex = 6;
             lblGhiChu.Text = "Ghi chú:";
             // 
             // lblTimKiem
             // 
             lblTimKiem.AutoSize = true;
-            lblTimKiem.Location = new Point(580, 25);
+            lblTimKiem.Location = new Point(420, 144);
             lblTimKiem.Name = "lblTimKiem";
-            lblTimKiem.Size = new Size(63, 17);
+            lblTimKiem.Size = new Size(93, 22);
             lblTimKiem.TabIndex = 7;
             lblTimKiem.Text = "Tìm kiếm:";
             // 
             // lblKhoa
             // 
             lblKhoa.AutoSize = true;
-            lblKhoa.Location = new Point(590, 85);
+            lblKhoa.Location = new Point(445, 254);
             lblKhoa.Name = "lblKhoa";
-            lblKhoa.Size = new Size(41, 17);
+            lblKhoa.Size = new Size(59, 22);
             lblKhoa.TabIndex = 8;
             lblKhoa.Text = "Khoa:";
             // 
             // lblDanToc
             // 
             lblDanToc.AutoSize = true;
-            lblDanToc.Location = new Point(344, 33);
+            lblDanToc.Location = new Point(410, 11);
             lblDanToc.Name = "lblDanToc";
-            lblDanToc.Size = new Size(60, 17);
+            lblDanToc.Size = new Size(84, 22);
             lblDanToc.TabIndex = 30;
             lblDanToc.Text = "Dân tộc :";
             // 
             // cboDanToc
             // 
             cboDanToc.FormattingEnabled = true;
-            cboDanToc.Location = new Point(410, 30);
+            cboDanToc.Location = new Point(520, 11);
             cboDanToc.Name = "cboDanToc";
-            cboDanToc.Size = new Size(121, 25);
+            cboDanToc.Size = new Size(121, 30);
             cboDanToc.TabIndex = 31;
+            // 
+            // btnExcel
+            // 
+            btnExcel.Location = new Point(1137, 806);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new Size(107, 40);
+            btnExcel.TabIndex = 32;
+            btnExcel.Text = "Xuất Excel";
+            btnExcel.UseVisualStyleBackColor = true;
+            btnExcel.Click += btn_excel_Click;
+            // 
+            // Luubtn
+            // 
+            Luubtn.Location = new Point(329, 805);
+            Luubtn.Name = "Luubtn";
+            Luubtn.Size = new Size(75, 41);
+            Luubtn.TabIndex = 34;
+            Luubtn.Text = "Lưu";
+            Luubtn.UseVisualStyleBackColor = true;
             // 
             // FormSinhVien
             // 
-            ClientSize = new Size(1291, 751);
+            ClientSize = new Size(1291, 911);
+            Controls.Add(Luubtn);
+            Controls.Add(btnExcel);
             Controls.Add(cboDanToc);
             Controls.Add(lblDanToc);
             Controls.Add(lblMaSV);
@@ -385,7 +407,7 @@
             Controls.Add(btnXemDiem);
             Controls.Add(btnXemDiemTheoMon);
             Controls.Add(dgvSinhVien);
-            Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "FormSinhVien";
             Text = "Quản lý Sinh Viên";
             Load += FormSinhVien_Load;
@@ -395,5 +417,7 @@
         }
         private Label lblDanToc;
         private ComboBox cboDanToc;
+        private Button btnExcel;
+        private Button Luubtn;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using ClosedXML.Excel;
 using Microsoft.Data.SqlClient;
 
 namespace QuanLySV1
@@ -20,7 +21,7 @@ namespace QuanLySV1
             LoadData();
             LoadKhoa();
             LoadDanToc();
-            
+
         }
 
         // Load danh sách sinh viên
@@ -43,7 +44,7 @@ namespace QuanLySV1
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvSinhVien.DataSource = dt;
-                    
+
                     // Đặt tên cột hiển thị và ẩn cột không cần thiết
                     if (dgvSinhVien.Columns.Count > 0)
                     {
@@ -63,7 +64,7 @@ namespace QuanLySV1
                             dgvSinhVien.Columns["TenDanToc"].HeaderText = "Dân tộc";
                         if (dgvSinhVien.Columns["GhiChu"] != null)
                             dgvSinhVien.Columns["GhiChu"].HeaderText = "Ghi chú";
-                        
+
                         // Ẩn cột MaDanToc vì đã có TenDanToc
                         if (dgvSinhVien.Columns["MaDanToc"] != null)
                             dgvSinhVien.Columns["MaDanToc"].Visible = false;
@@ -106,7 +107,7 @@ namespace QuanLySV1
                     SqlDataAdapter checkDa = new SqlDataAdapter(checkSql, conn);
                     DataTable checkDt = new DataTable();
                     checkDa.Fill(checkDt);
-                    
+
                     bool hasMaDanToc = false;
                     foreach (DataRow row in checkDt.Rows)
                     {
@@ -116,7 +117,7 @@ namespace QuanLySV1
                             break;
                         }
                     }
-                    
+
                     if (hasMaDanToc)
                     {
                         // Bảng có cột MaDanToc
@@ -124,7 +125,7 @@ namespace QuanLySV1
                         SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
-                        
+
                         cboDanToc.DataSource = dt;
                         cboDanToc.DisplayMember = "TenDanToc";
                         cboDanToc.ValueMember = "MaDanToc";
@@ -137,7 +138,7 @@ namespace QuanLySV1
                         SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
-                        
+
                         cboDanToc.DataSource = dt;
                         cboDanToc.DisplayMember = "TenDanToc";
                         cboDanToc.ValueMember = "TenDanToc";
@@ -147,9 +148,9 @@ namespace QuanLySV1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tải danh sách dân tộc: " + ex.Message, 
+                MessageBox.Show("Lỗi khi tải danh sách dân tộc: " + ex.Message,
                     "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
+
                 // Thêm dữ liệu mẫu vào ComboBox
                 cboDanToc.Items.Clear();
                 cboDanToc.Items.Add("Kinh");
@@ -259,12 +260,15 @@ namespace QuanLySV1
         }
 
         // Lưu (thông báo)
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void Luubtn_Click(object sender, EventArgs e)
         {
-            ClearInput();
-            MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo");
-        }
+            {
+                ClearInput();
+                MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo");
 
+
+            }
+        }
         // Hàm clear dữ liệu input
         private void ClearInput()
         {
@@ -299,7 +303,7 @@ namespace QuanLySV1
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvSinhVien.DataSource = dt;
-                
+
                 // Ẩn cột MaDanToc
                 if (dgvSinhVien.Columns["MaDanToc"] != null)
                     dgvSinhVien.Columns["MaDanToc"].Visible = false;
@@ -330,7 +334,7 @@ namespace QuanLySV1
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvSinhVien.DataSource = dt;
-                
+
                 // Ẩn cột MaDanToc
                 if (dgvSinhVien.Columns["MaDanToc"] != null)
                     dgvSinhVien.Columns["MaDanToc"].Visible = false;
@@ -370,7 +374,7 @@ namespace QuanLySV1
                 txtGioiTinh.Text = row.Cells["GioiTinh"].Value?.ToString();
                 txtLop.Text = row.Cells["MaLop"].Value?.ToString();
                 txtGhiChu.Text = row.Cells["GhiChu"].Value?.ToString();
-                
+
                 // Hiển thị dân tộc
                 string maDanToc = row.Cells["MaDanToc"].Value?.ToString();
                 if (!string.IsNullOrEmpty(maDanToc) && maDanToc != "0")
@@ -379,7 +383,7 @@ namespace QuanLySV1
                     {
                         // Thử set SelectedValue trước (nếu có MaDanToc)
                         cboDanToc.SelectedValue = maDanToc;
-                        
+
                         // Nếu không thành công, tìm theo tên
                         if (cboDanToc.SelectedIndex == -1)
                         {
@@ -418,6 +422,67 @@ namespace QuanLySV1
                 {
                     cboDanToc.SelectedIndex = -1;
                 }
+            }
+        }
+
+        private void btn_excel_Click(object sender, EventArgs e)
+        {
+            if (dgvSinhVien.Rows.Count > 0)
+            {
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+                {
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            using (XLWorkbook wb = new XLWorkbook())
+                            {
+                                var ws = wb.Worksheets.Add("DanhSachSinhVien");
+
+                                for (int i = 0; i < dgvSinhVien.Columns.Count; i++)
+                                {
+                                    ws.Cell(1, i + 1).Value = dgvSinhVien.Columns[i].HeaderText;
+                                }
+
+                                for (int i = 0; i < dgvSinhVien.Rows.Count; i++)
+                                {
+                                    for (int j = 0; j < dgvSinhVien.Columns.Count; j++)
+                                    {
+                                        object value = dgvSinhVien.Rows[i].Cells[j].Value;
+                                        if (dgvSinhVien.Columns[j].Name == "NgaySinh" && value != null && value != DBNull.Value)
+                                        {
+                                            DateTime d = Convert.ToDateTime(value);
+                                            var cell = ws.Cell(i + 2, j + 1);
+                                            cell.Value = d;
+                                            cell.Style.DateFormat.Format = "dd/MM/yyyy";
+                                        }
+                                        else
+                                        {
+                                            ws.Cell(i + 2, j + 1).Value = value?.ToString();
+                                        }
+                                    }
+                                }
+
+                                var range = ws.Range(1, 1, dgvSinhVien.Rows.Count + 1, dgvSinhVien.Columns.Count);
+                                range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                                range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                                ws.Columns().AdjustToContents();
+
+                                wb.SaveAs(sfd.FileName);
+                            }
+
+                            MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

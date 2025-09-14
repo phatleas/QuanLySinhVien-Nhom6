@@ -54,19 +54,19 @@
             // 
             // txtTaiKhoan
             // 
-            txtTaiKhoan.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTaiKhoan.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTaiKhoan.Location = new Point(539, 239);
             txtTaiKhoan.Name = "txtTaiKhoan";
-            txtTaiKhoan.Size = new Size(220, 35);
+            txtTaiKhoan.Size = new Size(220, 39);
             txtTaiKhoan.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            txtMatKhau.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMatKhau.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMatKhau.Location = new Point(539, 338);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.PasswordChar = '*';
-            txtMatKhau.Size = new Size(220, 35);
+            txtMatKhau.Size = new Size(220, 39);
             txtMatKhau.TabIndex = 3;
             // 
             // btnDangNhap
